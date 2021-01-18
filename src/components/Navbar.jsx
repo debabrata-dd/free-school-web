@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { MdFingerprint } from "react-icons/md";
+
+import { FcBookmark } from "react-icons/fc";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Button } from "./Button";
 import "./Navbar.css";
@@ -28,8 +29,8 @@ function Navbar() {
         <div className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-              <MdFingerprint className="navbar-icon"></MdFingerprint>
-              LAVISH
+              <FcBookmark className="navbar-icon"></FcBookmark>
+              FreeSchool &trade;
             </Link>
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}

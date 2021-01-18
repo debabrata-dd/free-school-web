@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import {
+  Route,
+  BrowserRouter as Router,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/pages/HomePage/Home";
 import Footer from "./components/pages/Footer/Footer";
@@ -13,6 +18,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home}></Route>
         <Route path="/services" component={Services}></Route>
+        <Redirect to={Home} />
       </Switch>
       <Footer></Footer>
     </Router>
