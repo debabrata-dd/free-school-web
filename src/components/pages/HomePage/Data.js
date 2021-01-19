@@ -3,9 +3,9 @@ export const homeObjOne = {
   lightText: true,
   lightTextDesc: true,
   topLine: "Exclusive Access",
-  headline: "Unlimited Transactions with zero fees",
+  headline: "Unlimited Learning on FreeSchool for FREE",
   description:
-    "Get access to our exclusive diamond card that allows you to  send unlimited transactions without getting charged any fees",
+    "Get access to thousands of teachers sharing their knowledge LIVE through this platform for FREE",
   buttonLabel: "Get Started",
   imgStart: "",
   img: "images/svg-1.svg",
