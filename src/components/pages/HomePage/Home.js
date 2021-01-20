@@ -9,8 +9,8 @@ function Home() {
       <HeroSection {...homeObjOne}></HeroSection>
       <HeroSection {...homeObjThree}></HeroSection>
       <HeroSection {...homeObjTwo}></HeroSection>
-      <Pricing></Pricing>
-      <HeroSection {...homeObjFour}></HeroSection>
+      {/* <Pricing></Pricing> */}
+      {/* <HeroSection {...homeObjFour}></HeroSection> */}
     </>
   );
 }
