@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/free-school-web/static/css/main.da928e7f.chunk.css",
+    "main.js": "/free-school-web/static/js/main.e552d175.chunk.js",
+    "main.js.map": "/free-school-web/static/js/main.e552d175.chunk.js.map",
+    "runtime-main.js": "/free-school-web/static/js/runtime-main.e0203c30.js",
+    "runtime-main.js.map": "/free-school-web/static/js/runtime-main.e0203c30.js.map",
+    "static/js/2.9a782803.chunk.js": "/free-school-web/static/js/2.9a782803.chunk.js",
+    "static/js/2.9a782803.chunk.js.map": "/free-school-web/static/js/2.9a782803.chunk.js.map",
+    "index.html": "/free-school-web/index.html",
+    "precache-manifest.7068d4ecc8d96d0ea2ab8f0269a0a604.js": "/free-school-web/precache-manifest.7068d4ecc8d96d0ea2ab8f0269a0a604.js",
+    "service-worker.js": "/free-school-web/service-worker.js",
+    "static/css/main.da928e7f.chunk.css.map": "/free-school-web/static/css/main.da928e7f.chunk.css.map",
+    "static/js/2.9a782803.chunk.js.LICENSE.txt": "/free-school-web/static/js/2.9a782803.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0203c30.js",
+    "static/js/2.9a782803.chunk.js",
+    "static/css/main.da928e7f.chunk.css",
+    "static/js/main.e552d175.chunk.js"
+  ]
+}
