@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3d0767b2f576f627fdde919f87f1e876",
+    "revision": "54ac8366291837f6c26871a0dc5d1b35",
     "url": "/free-school-web/index.html"
   },
   {
-    "revision": "1bd4a117fec9d2fc647f",
+    "revision": "b8eb22dcbba6aac6c52c",
     "url": "/free-school-web/static/css/main.da928e7f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/free-school-web/static/js/2.9a782803.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1bd4a117fec9d2fc647f",
-    "url": "/free-school-web/static/js/main.e552d175.chunk.js"
+    "revision": "b8eb22dcbba6aac6c52c",
+    "url": "/free-school-web/static/js/main.e56b21bd.chunk.js"
   },
   {
     "revision": "185e87d5dbcaec8121c4",
