@@ -15,7 +15,7 @@ import LoginPage from "./components/pages/LoginPage";
 
 function App() {
   const [user, setUser] = useState("");
-  const [email, setEmail] = useState("test@gmail.com");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
