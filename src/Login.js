@@ -1,21 +1,10 @@
 import React, { useState, useEffect } from "react";
-import fire from "./fire";
-import "./App.css";
-import {
-  Route,
-  BrowserRouter as Router,
-  Switch,
-  Redirect,
-} from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./components/pages/HomePage/Home";
-import Footer from "./components/pages/Footer/Footer";
-import { Services } from "./components/pages/Services/Services";
 import LoginPage from "./components/pages/LoginPage";
+import fire from "./fire";
 
-function App() {
+const Login = (props) => {
   const [user, setUser] = useState("");
-  const [email, setEmail] = useState("test@gmail.com");
+  const [email, setEmail] = useState("asas");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -86,33 +75,22 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Navbar user={user} handleLogout={handleLogout}></Navbar>
-      <Switch>
-        <Route path="/" exact component={Home}></Route>
-        <Route path="/services" component={Services}></Route>
-        <Route
-          path="/sign-up"
-          render={() => (
-            <LoginPage
-              email={email}
-              setEmail={setEmail}
-              password={password}
-              setPassword={setPassword}
-              handleLogin={handleLogin}
-              handleSignup={handleSignup}
-              hasAccount={hasAccount}
-              setHasAccount={setHasAccount}
-              emailError={emailError}
-              passwordError={passwordError}
-            />
-          )}
-        ></Route>
-        <Redirect to={Home} />
-      </Switch>
-      <Footer></Footer>
-    </Router>
+    <>
+      <span>{props.name}</span>
+      <LoginPage
+        email={email}
+        setEmail={setEmail}
+        password={password}
+        setPassword={setPassword}
+        handleLogin={handleLogin}
+        handleSignup={handleSignup}
+        hasAccount={hasAccount}
+        setHasAccount={setHasAccount}
+        emailError={emailError}
+        passwordError={passwordError}
+      />
+    </>
   );
-}
+};
 
-export default App;
+export default Login;

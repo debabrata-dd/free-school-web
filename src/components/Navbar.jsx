@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link as NavLink } from "react-router-dom";
 
 import { FcBookmark } from "react-icons/fc";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -7,7 +7,7 @@ import { Button } from "./Button";
 import "./Navbar.css";
 import { IconContext } from "react-icons/lib";
 
-function Navbar() {
+function Navbar(props) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -28,16 +28,16 @@ function Navbar() {
       <IconContext.Provider value={{ color: "#fff" }}>
         <div className="navbar">
           <div className="navbar-container container">
-            <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            <NavLink to="/" className="navbar-logo" onClick={closeMobileMenu}>
               <FcBookmark className="navbar-icon"></FcBookmark>
               FreeSchool &trade;
-            </Link>
+            </NavLink>
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
-                <Link
+                <NavLink
                   activeClassName="menu_active"
                   exact
                   to="/"
@@ -45,43 +45,86 @@ function Navbar() {
                   onClick={closeMobileMenu}
                 >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link
+                <NavLink
                   to="/services"
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  Services
-                </Link>
+                  Student
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link
+                <NavLink
                   to="/products"
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  Products
-                </Link>
+                  Teacher
+                </NavLink>
               </li>
-              <li className="nav-btn">
-                {button ? (
-                  <Link
-                    to="/sign-up"
-                    className="btn-link"
-                    onClick={closeMobileMenu}
-                  >
-                    <Button buttonStyle="btn--outline">SIGN UP</Button>
-                  </Link>
-                ) : (
-                  <Link to="/sign-up" className="btn-link">
-                    <Button buttonStyle="btn--outline" buttonSize="btn--mobile">
-                      SIGN UP
-                    </Button>
-                  </Link>
-                )}
-              </li>
+              {props.user ? (
+                <>
+                  <li className="nav-item">
+                    <NavLink
+                      to="/my-profile"
+                      className="nav-links"
+                      onClick={closeMobileMenu}
+                    >
+                      My Profile
+                    </NavLink>
+                  </li>
+                  <li className="nav-btn">
+                    {button ? (
+                      <NavLink
+                        to="/logout"
+                        className="btn-link"
+                        onClick={closeMobileMenu}
+                      >
+                        <Button
+                          onClick={props.handleLogout}
+                          buttonStyle="btn--outline"
+                        >
+                          Log out
+                        </Button>
+                      </NavLink>
+                    ) : (
+                      <NavLink to="/logout" className="btn-link">
+                        <Button
+                          onClick={props.handleLogout}
+                          buttonStyle="btn--outline"
+                          buttonSize="btn--mobile"
+                        >
+                          Log out
+                        </Button>
+                      </NavLink>
+                    )}
+                  </li>
+                </>
+              ) : (
+                <li className="nav-btn">
+                  {button ? (
+                    <NavLink
+                      to="/sign-up"
+                      className="btn-link"
+                      onClick={closeMobileMenu}
+                    >
+                      <Button buttonStyle="btn--outline">SIGN UP</Button>
+                    </NavLink>
+                  ) : (
+                    <NavLink to="/sign-up" className="btn-link">
+                      <Button
+                        buttonStyle="btn--outline"
+                        buttonSize="btn--mobile"
+                      >
+                        SIGN UP2
+                      </Button>
+                    </NavLink>
+                  )}
+                </li>
+              )}
             </ul>
           </div>
         </div>
