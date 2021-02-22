@@ -28,7 +28,6 @@ const LoginPage = (props) => {
         <label>Password</label>
         <input
           type="password"
-          autoFocus
           required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
