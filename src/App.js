@@ -12,6 +12,7 @@ import Home from "./components/pages/HomePage/Home";
 import Footer from "./components/pages/Footer/Footer";
 import { Services } from "./components/pages/Services/Services";
 import LoginPage from "./components/pages/LoginPage";
+import MyProfile from "./components/pages/MyProfile/MyProfile";
 
 function App() {
   const [user, setUser] = useState("");
@@ -91,6 +92,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home}></Route>
         <Route path="/services" component={Services}></Route>
+        <Route path="/my-profile" component={MyProfile}></Route>
         <Route
           path="/sign-up"
           render={() => (
